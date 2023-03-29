@@ -1,9 +1,9 @@
 # 1. Charger le jeu de donn?es dans R. Afficher les donn?es d'apprentissage.
 
 rm(list = ls())
-data <- read.table(file = "/home/llabiod/Bureau/Annee_2021/MLDS2021/MLDS_M2/App_Supervise_2021/courssvm/Cours_svm_20/synth_train.txt", header = TRUE)
+data <- read.table(file = "synth_train.txt", header = TRUE)
 
-data <- read.table(file = "/home/llabiod/Bureau/Annee_2021/MLDS2021/MLDS_M2/App_Supervise_2021/courssvm/Cours_svm_20/spiral.txt")
+data <- read.table(file = "spiral.txt")
 
 dim(data)
 ## [1] 100 3
@@ -28,7 +28,7 @@ svm.lin
 svm.lin.pred <- predict(object = svm.lin, newdata = data)
 sum(svm.lin.pred != Y)/length(Y)
 
-data_test <- read.table(file = "/home/llabiod/Bureau/Annee_2021/MLDS2021/MLDS_M2/App_Supervise_2021/courssvm/Cours_svm_20/synth_test.txt", header = TRUE)
+data_test <- read.table(file = "synth_test.txt", header = TRUE)
 dim(data_test)
 
 head(data_test)
